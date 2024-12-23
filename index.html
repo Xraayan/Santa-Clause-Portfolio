@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Delivery Service</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-bg: #c41e3a;
+            --header-text: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding-top: 30px;
+            min-height: 70px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        header a {
+            color: var(--header-text);
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #ffffff;
+            color: #c41e3a;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        header a:hover {
+            background: #f8f8f8;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .experience {
+            margin-bottom: 20px;
+        }
+
+        .testimonial {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .slider {
+            cursor: pointer;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            display: block;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: white;
+            bottom: 2px;
+            left: 2px;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #000;
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                opacity: 0;
+            }
+            3% {
+                opacity: 0.9;
+            }
+            90% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(0, 100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-switch">
+        <label>
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <header>
+        <div class="container">
+            <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#c41e3a"/>
+                <path d="M50 20 L80 80 L20 80 Z" fill="#ffffff"/>
+                <circle cx="50" cy="35" r="10" fill="#ffffff"/>
+            </svg>
+            <h1>Santa's Delivery Service</h1>
+            <p>Global Logistics Expert & Joy Distributor</p>
+            <a href="#contact">Request Consultation</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="C:\Users\adith\Downloads\DALL·E 2024-12-23 17.18.08 - Santa Claus reimagined as an Amazon delivery driver, wearing a blue uniform with an Amazon logo on the cap and jacket. He is carrying a package in one.webp" alt="Santa Claus" class="profile-img">
+            <h2>About Me</h2>
+            <p>Greetings! I'm Santa Claus, a seasoned logistics professional with a jolly twist. My expertise lies in global gift distribution, team management, and spreading cheer worldwide. With centuries of experience, I've mastered the art of efficient delivery, even in the most challenging conditions.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Expertise & Experience</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Supply Chain Management</h3>
+                    <p>Orchestrating global toy production and distribution</p>
+                </div>
+                <div class="skill">
+                    <h3>Rapid Delivery Systems</h3>
+                    <p>Pioneered supersonic sleigh technology</p>
+                </div>
+                <div class="skill">
+                    <h3>Time-Space Optimization</h3>
+                    <p>Delivering to 7 billion customers in one night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Career Highlights</h2>
+            <div class="experience">
+                <h3>1700 - Present: North Pole Enterprises</h3>
+                <h4>CEO & Head of Delivery</h4>
+                <p>Revolutionized global gift distribution, achieving 100% customer satisfaction for over 300 years running.</p>
+            </div>
+            <div class="experience">
+                <h3>1500 - 1700: Lapland Logistics</h3>
+                <h4>Senior Delivery Consultant</h4>
+                <p>Implemented reindeer-powered delivery system, increasing efficiency by 200% and reducing carbon footprint.</p>
+            </div>
+            <div class="experience">
+                <h3>1200 - 1500: Chimney Chutes Inc.</h3>
+                <h4>Innovative Delivery Specialist</h4>
+                <p>Pioneered the chimney entry technique, dramatically improving last-mile delivery in urban areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <p>"Santa's logistics expertise is unparalleled. He consistently delivers joy to millions, meeting impossible deadlines with a smile."</p>
+                <p><strong>- World Economic Forum</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Santa's supply chain management skills are nothing short of miraculous. He's the undisputed leader in global gift distribution."</p>
+                <p><strong>- Harvard Business Review</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>North Pole Headquarters, Arctic Circle</p>
+            <p>Email: <a href="mailto:santa@northpole.com">santa@northpole.com</a></p>
+            <p>Available for strategic consultations year-round</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Santa's Delivery Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.documentElement.style.setProperty('--bg-color', '#333333');
+                document.documentElement.style.setProperty('--text-color', '#ffffff');
+                document.documentElement.style.setProperty('--header-bg', '#1a1a1a');
+            } else {
+                document.documentElement.style.setProperty('--bg-color', '#ffffff');
+                document.documentElement.style.setProperty('--text-color', '#333333');
+                document.documentElement.style.setProperty('--header-bg', '#c41e3a');
+            }
+        });
+
+        // Snowflake animation
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 7 + 's'; // Between 7-10s
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 300);
+
+        // Image hover animation
+        const profileImg = document.querySelector('.profile-img');
+        profileImg.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.transition = 'transform 0.3s ease-in-out';
+        });
+        profileImg.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
